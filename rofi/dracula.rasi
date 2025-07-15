@@ -1,0 +1,99 @@
+/*
+ * ROFI color theme
+ *
+ * Based on Something Found in the Internet
+ *
+ * User: Contributors
+ * Copyright:  = Magnifying glass, Lupe
+ */
+ 
+configuration {
+  font: "FiraCodeNerdFont-Regular 16";
+  show-icons: true;
+
+  drun {
+    display-name: "   ";
+  }
+
+  run {
+    display-name: "   ";
+  }
+
+  window {
+    display-name: "   ";
+  }
+
+  timeout {
+    delay: 30;
+    action: "kb-cancel";
+  }
+}
+
+
+* {
+  bg: #00000030;
+  bg-alt: #44475a;
+
+  fg: #f8f8f2;
+
+  blue: #ff931e;
+  blue-alt: #ff931e88;
+  purple: #ff931e;
+
+  background-color: @bg;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+element {
+  padding: 12;
+  text-color: #AAAAAA;
+}
+
+element selected {
+  padding: 20;
+  text-color: @purple;
+  background-color: #FFFFFF00;
+}
+
+element-text {
+  text-color: inherit;
+  background-color: #00000000;
+}
+element-icon {
+    size:             1.2em ;
+}
+entry {
+  background-color: @blue-alt;
+  padding: 12 0 12 3;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @blue-alt;
+  enabled: true;
+  font: "FiraCodeNerdFont-Regular 16";
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+window { 
+  border-radius: 10px;
+  transparency: "real";
+}
