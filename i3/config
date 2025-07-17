@@ -16,7 +16,7 @@ set $alt Mod1
 ### Wallpaper: ###
 # - You need to specify homescreen wallpaper using azote
 
-set $lockScreenWallpaper "/home/evan/Images/OuterWildsWallpaper.jpg"
+set $lockScreenWallpaper "~/.config/MyOuterWildsWallpaper.png"
 exec_always --no-startup-id-feh --bg-scale $lockScreenWallpaper
 
 
@@ -127,6 +127,9 @@ bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
 
+
+bindsym $super+u exec kitty sudo garuda-update -y
+
 # split in horizontal orientation
 bindsym $super+h split h
 
@@ -219,7 +222,7 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 # change borders
-bindsym $super+u border none
+# bindsym $super+u border none
 bindsym $super+y border pixel 1
 bindsym $super+n border normal
 
